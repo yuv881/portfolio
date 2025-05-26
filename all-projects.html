@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yuvraj Singh Shaktawat - All Projects">
+    <meta name="keywords" content="Python Developer, Web Development, Portfolio, HTML, CSS, JavaScript, Projects">
+    <title>Yuvraj Singh Shaktawat | All Projects</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <nav class="navbar">
+        <div class="logo">Yuvraj</div>
+        <div class="nav-links">
+            <a href="index.html#home" class="nav-link">Home</a>
+            <a href="index.html#about" class="nav-link">About</a>
+            <a href="index.html#education" class="nav-link">Education</a>
+            <a href="index.html#skills" class="nav-link">Skills</a>
+            <a href="#projects" class="nav-link active">Projects</a>
+            <a href="index.html#internships" class="nav-link">Internships</a>
+            <a href="index.html#contact" class="nav-link">Contact</a>
+        </div>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <section id="projects" class="all-projects-section">
+        <div class="container">
+            <h2 class="fade-up">All Projects</h2>
+            <div class="all-projects-grid">
+                <!-- Projects will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer will go here -->
+
+    <script id="project-data" type="application/json">
+        [
+            {
+                "title": "Amazon Clone",
+                "status": "In progress",
+                "tech": "HTML, CSS",
+                "desc": "Designing a responsive ecommerce interface replicating Amazon's layout and user experience.",
+                "image": "images/amazon.png",
+                "github": "projects/amazon clone/",
+                "live": "projects/amazon clone/index.html"
+            },
+            {
+                "title": "Netflix Clone",
+                "status": "In progress",
+                "tech": "HTML, CSS",
+                "desc": "Building a mobile-friendly Netflix interface clone with focus on seamless navigation and design fidelity.",
+                "image": "images/netflix.png",
+                "github": "projects/netflix clone/",
+                "live": "projects/netflix clone/home.html"
+            },
+            {
+                "title": "Shifra AI",
+                "status": "Completed",
+                "tech": "Python",
+                "desc": "Engineered a Python-based voice assistant with speech recognition.",
+                "image": "shifra-ai.jpg",
+                "github": "#",
+                "live": "#"
+            }
+        ]
+    </script>
+
+    <!-- Modal for project details -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const projectsGrid = document.querySelector('.all-projects-grid');
+            const projectData = JSON.parse(document.getElementById('project-data').textContent);
+
+            const modal = document.getElementById('project-modal');
+            const modalBody = document.getElementById('modal-body');
+            const closeModal = document.querySelector('.close-modal');
+
+            projectData.forEach((project, idx) => {
+                const projectCard = document.createElement('div');
+                projectCard.classList.add('project-card');
+                projectCard.classList.add('fade-up'); // Add initial animation class
+                projectCard.style.cssText = `--animation-delay: ${idx * 0.1}s;`; // Add animation delay
+
+                projectCard.innerHTML = `
+                    <div class="project-image">
+                        <img src="${project.image}" alt="${project.title} Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>${project.title} <span class="status ${project.status === 'Completed' ? 'completed' : 'in-progress'}">${project.status}</span></h3>
+                        <div class="tech-stack">${project.tech.split(', ').map(tech => `<span>${tech}</span>`).join('')}</div>
+                        <p>${project.desc}</p>
+                        <div class="project-links">
+                            <a href="${project.github}" class="project-link" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <a href="${project.live}" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i> Live</a>
+                        </div>
+                    </div>
+                `;
+                projectsGrid.appendChild(projectCard);
+
+                // Add click event listener for modal
+                projectCard.addEventListener('click', () => {
+                    modal.classList.add('active');
+                    modalBody.innerHTML = `
+                        <h3>${project.title} <span class="status ${project.status === 'Completed' ? 'completed' : 'in-progress'}">${project.status}</span></h3>
+                        <p><strong>Tech used:</strong> ${project.tech}</p>
+                        <p>${project.desc}</p>
+                    `;
+                });
+            });
+
+            // Close modal event listeners
+            closeModal.addEventListener('click', () => modal.classList.remove('active'));
+            modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('active'); });
+
+             // Set up Intersection Observer for animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            // Observe dynamically created project cards
+            document.querySelectorAll('.all-projects-grid .project-card').forEach(card => {
+                observer.observe(card);
+            });
+        });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html> 
