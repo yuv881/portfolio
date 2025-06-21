@@ -255,7 +255,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe elements for fade-in
-document.querySelectorAll('.about-content, .project-card, .contact-form, .skill, .timeline-item, .info-item, .flip-in').forEach(el => {
+document.querySelectorAll('.about-content, .project-card, .contact-form, .skill, .timeline-item, .info-item, .flip-in, .internship-card').forEach(el => {
     observer.observe(el);
 });
 
@@ -447,3 +447,14 @@ const timelineObserver = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.2 });
 timelineItems.forEach(item => timelineObserver.observe(item));
+
+// Animate internship card on scroll
+const internshipCards = document.querySelectorAll('.internship-card');
+const internshipObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+        }
+    });
+}, { threshold: 0.2 });
+internshipCards.forEach(card => internshipObserver.observe(card));
