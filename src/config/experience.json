@@ -1,0 +1,35 @@
+{
+    "Education": [
+        {
+            "school": "DVM English School",
+            "degree": "Higher Secondary School",
+            "field_of_study": "Science",
+            "start_date": "2021",
+            "end_date": "2022",
+            "percentage": "75.40%"
+        },
+        {
+            "school": "Vikram University",
+            "degree": "Bachelor of Computer Applications",
+            "start_date": "2022",
+            "end_date": "2025",
+            "CGPA": "6.8"
+        },
+        {
+            "school": "Gyanoday University",
+            "degree": "Master of Computer Applications",
+            "start_date": "2025",
+            "end_date": "2027",
+            "percentage": ""
+        }
+    ],
+    "Experience": [
+        {
+            "Company": "Mandasa technologies",
+            "Role": "Junior Web Developer",
+            "start_date": "27 Aug 2025",
+            "end_date": "Present",
+            "description": "Shopify theme developer crafting customized, high-performance eCommerce storefronts."
+        }
+    ]
+}

@@ -1,0 +1,85 @@
+[
+    {
+        "id": 1,
+        "title": "E-commerce Platform",
+        "description": "A full-stack e-commerce solution with React, Node.js, and MongoDB. Features secure checkout and user dashboard.",
+        "imageUrl": "https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=1632&auto=format&fit=crop",
+        "technologies": [
+            "React",
+            "Node.js",
+            "MongoDB",
+            "Tailwind CSS"
+        ],
+        "liveLink": "https://example.com/ecommerce",
+        "githubLink": "https://github.com/example/ecommerce"
+    },
+    {
+        "id": 2,
+        "title": "Task Management App",
+        "description": "A sleek and minimal task manager built with React and Firebase. Includes drag-and-drop mechanics and real-time syncing.",
+        "imageUrl": "https://images.unsplash.com/photo-1611224885990-ab7363d1f2a9?q=80&w=1339&auto=format&fit=crop",
+        "technologies": [
+            "React",
+            "Firebase",
+            "Zustand",
+            "Framer Motion"
+        ],
+        "liveLink": "https://example.com/taskapp",
+        "githubLink": "https://github.com/example/taskapp"
+    },
+    {
+        "id": 3,
+        "title": "Weather Dashboard",
+        "description": "A weather application pulling real-time data from the OpenWeather API, featuring dynamic animated backgrounds based on weather conditions.",
+        "imageUrl": "https://images.unsplash.com/photo-1592210454359-9043f067919b?q=80&w=1470&auto=format&fit=crop",
+        "technologies": [
+            "JavaScript",
+            "HTML5",
+            "CSS3",
+            "REST APIs"
+        ],
+        "liveLink": "https://example.com/weather",
+        "githubLink": "https://github.com/example/weather"
+    },
+    {
+        "id": 4,
+        "title": "AI Image Generator",
+        "description": "A web app utilizing OpenAI's DALL-E API to generate custom images based on text prompts. Built with Next.js and styled with Tailwind.",
+        "imageUrl": "https://images.unsplash.com/photo-1685250005719-722de7ee4580?q=80&w=1470&auto=format&fit=crop",
+        "technologies": [
+            "Next.js",
+            "OpenAI API",
+            "Tailwind CSS",
+            "Vercel"
+        ],
+        "liveLink": "https://example.com/ai-image",
+        "githubLink": "https://github.com/example/ai-image"
+    },
+    {
+        "id": 5,
+        "title": "Portfolio Website V1",
+        "description": "My previous portfolio website showcasing early projects. Built using plain HTML, CSS, and vanilla JavaScript with custom CSS animations.",
+        "imageUrl": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1555&auto=format&fit=crop",
+        "technologies": [
+            "HTML",
+            "CSS",
+            "Vanilla JS"
+        ],
+        "liveLink": "https://example.com/old-portfolio",
+        "githubLink": "https://github.com/example/old-portfolio"
+    },
+    {
+        "id": 6,
+        "title": "Crypto Price Tracker",
+        "description": "A responsive dashboard tracking cryptocurrency prices in real-time utilizing the CoinGecko API. Includes historical price charting with Recharts.",
+        "imageUrl": "https://images.unsplash.com/photo-1621504450181-5d356f61d307?q=80&w=1587&auto=format&fit=crop",
+        "technologies": [
+            "React",
+            "Recharts",
+            "Redux",
+            "Material UI"
+        ],
+        "liveLink": "https://example.com/crypto",
+        "githubLink": "https://github.com/example/crypto"
+    }
+]
