@@ -6,7 +6,7 @@ const Skills = () => {
             {/* Heading */}
             <div className="text-center mb-16">
                 <h2
-                    className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-transparent"
+                    className="text-5xl tracking-wide md:text-6xl lg:text-7xl font-black text-transparent"
                     style={{ WebkitTextStroke: "2px #64748b" }}
                 >
                     Skills

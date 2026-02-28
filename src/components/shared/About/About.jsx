@@ -8,12 +8,10 @@ const About = () => {
 
                 {/* Section Header */}
                 <div className="flex flex-col items-center mb-20 text-center">
-                    <h2 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter text-transparent"
+                    <h2 className="text-5xl tracking-wide md:text-6xl lg:text-7xl font-black text-transparent"
                         style={{
                             WebkitTextStroke: '2px #64748b', // slate-500
-                        }}>
-                        About Me
-                    </h2>
+                        }}>About me</h2>
                     <p className="mt-6 text-lg text-slate-600 dark:text-slate-400 max-w-2xl font-light leading-relaxed">
                         I am a passionate Full Stack Developer who loves building digital solutions that merge <strong className="font-semibold text-slate-800 dark:text-slate-200">beautiful design</strong> with <strong className="font-semibold text-slate-800 dark:text-slate-200">powerful engineering</strong>.
                     </p>
@@ -26,7 +24,7 @@ const About = () => {
                         <div className="bg-white/60 dark:bg-slate-900/40 backdrop-blur-xl border border-slate-200 dark:border-slate-800 rounded-3xl p-8 shadow-xl shadow-slate-200/40 dark:shadow-none hover:shadow-2xl hover:border-slate-300 dark:hover:border-slate-700 transition-all duration-500">
                             <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-3">
                                 <TerminalIcon />
-                                My Journey
+                                About me
                             </h3>
                             <div className="space-y-4 text-slate-600 dark:text-slate-400 leading-relaxed font-light text-base md:text-lg">
                                 <p>

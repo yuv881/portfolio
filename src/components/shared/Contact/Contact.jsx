@@ -11,7 +11,7 @@ const Contact = () => {
 
                     <div className="flex flex-col gap-6 w-full lg:w-1/2">
                         <div className="space-y-4">
-                            <h2 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter text-transparent"
+                            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-normal text-transparent"
                                 style={{
                                     WebkitTextStroke: '1px #64748b', // slate-500
                                 }}>
@@ -107,7 +107,7 @@ const Contact = () => {
                                 className="group relative w-full flex items-center justify-center gap-3 bg-slate-900 text-white dark:bg-white dark:text-slate-950 font-bold rounded-xl py-4 overflow-hidden transition-all hover:scale-[1.02] shadow-lg hover:shadow-xl dark:shadow-[0_0_30px_-5px_rgba(255,255,255,0.2)] dark:hover:shadow-[0_0_40px_-5px_rgba(255,255,255,0.3)] active:scale-95 mt-2"
                             >
                                 <span>Send Message</span>
-                                <Send size={18} onClick={() => window.location.href = "mailto:yuvrajsinghshaktawat28@gmail.com"} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                                <Send size={18} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                             </button>
                         </form>
                     </div>

@@ -11,7 +11,7 @@ const Projects = () => {
 
                 {/* Section Header */}
                 <div className="flex flex-col items-center mb-16 space-y-4 text-center">
-                    <h2 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter text-transparent"
+                    <h2 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-wide text-transparent"
                         style={{
                             WebkitTextStroke: '2px #64748b', // slate-500
                         }}>
