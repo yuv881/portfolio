@@ -1,6 +1,62 @@
+import { useState } from "react"
 import { Mail, User, MessageSquare, Send } from "lucide-react"
 
 const Contact = () => {
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: ''
+    });
+    const [status, setStatus] = useState({
+        loading: false,
+        success: false,
+        error: null
+    });
+
+    const WEB3FORMS_KEY = import.meta.env.VITE_WEB3FORMS_KEY || "c839553f-bd16-4531-b707-97c9b95aafb8";
+
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.id]: e.target.value
+        });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setStatus({ loading: true, success: false, error: null });
+
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                body: JSON.stringify({
+                    access_key: WEB3FORMS_KEY,
+                    name: formData.name,
+                    email: formData.email,
+                    message: formData.message,
+                    subject: `New Portfolio Message from ${formData.name}`,
+                }),
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                setStatus({ loading: false, success: true, error: null });
+                setFormData({ name: '', email: '', message: '' });
+                setTimeout(() => setStatus(prev => ({ ...prev, success: false })), 5000);
+            } else {
+                setStatus({ loading: false, success: false, error: result.message || 'Something went wrong' });
+            }
+        } catch (err) {
+            console.error('Contact form error:', err);
+            setStatus({ loading: false, success: false, error: 'Failed to send message. Please try again later.' });
+        }
+    };
+
     return (
         <section id="contact" className="relative w-full py-12 min-h-[80vh] flex items-center justify-center overflow-hidden">
             <div className="absolute top-1/4 -right-10 w-96 h-96 bg-slate-200 dark:bg-slate-800 rounded-full mix-blend-multiply filter blur-3xl opacity-50 dark:opacity-20 animate-blob"></div>
@@ -51,7 +107,7 @@ const Contact = () => {
                     </div>
 
                     <div className="w-full lg:w-1/2">
-                        <form className="flex flex-col gap-6 w-full bg-white/80 dark:bg-slate-900/50 backdrop-blur-md border border-slate-200 dark:border-slate-800/50 p-8 md:p-10 rounded-3xl shadow-xl dark:shadow-2xl relative">
+                        <form onSubmit={handleSubmit} className="flex flex-col gap-6 w-full bg-white/80 dark:bg-slate-900/50 backdrop-blur-md border border-slate-200 dark:border-slate-800/50 p-8 md:p-10 rounded-3xl shadow-xl dark:shadow-2xl relative">
                             <div className="absolute -inset-px bg-linear-to-b from-slate-200 dark:from-slate-700/50 to-transparent rounded-3xl -z-10 pointer-events-none"></div>
 
                             <div className="flex flex-col gap-2">
@@ -63,6 +119,8 @@ const Contact = () => {
                                     <input
                                         type="text"
                                         id="name"
+                                        value={formData.name}
+                                        onChange={handleChange}
                                         placeholder="John Doe"
                                         className="w-full bg-slate-50 dark:bg-slate-950/50 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white rounded-xl py-4 pl-12 pr-4 focus:ring-2 focus:ring-slate-400 dark:focus:ring-slate-500 focus:border-transparent outline-none transition-all duration-300 placeholder:text-slate-400 dark:placeholder:text-slate-600"
                                         required
@@ -79,6 +137,8 @@ const Contact = () => {
                                     <input
                                         type="email"
                                         id="email"
+                                        value={formData.email}
+                                        onChange={handleChange}
                                         placeholder="john@example.com"
                                         className="w-full bg-slate-50 dark:bg-slate-950/50 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white rounded-xl py-4 pl-12 pr-4 focus:ring-2 focus:ring-slate-400 dark:focus:ring-slate-500 focus:border-transparent outline-none transition-all duration-300 placeholder:text-slate-400 dark:placeholder:text-slate-600"
                                         required
@@ -95,6 +155,8 @@ const Contact = () => {
                                     <textarea
                                         id="message"
                                         rows="5"
+                                        value={formData.message}
+                                        onChange={handleChange}
                                         placeholder="Tell me about your project..."
                                         className="w-full bg-slate-50 dark:bg-slate-950/50 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white rounded-xl py-4 pl-12 pr-4 focus:ring-2 focus:ring-slate-400 dark:focus:ring-slate-500 focus:border-transparent outline-none transition-all duration-300 placeholder:text-slate-400 dark:placeholder:text-slate-600 resize-none"
                                         required
@@ -104,11 +166,19 @@ const Contact = () => {
 
                             <button
                                 type="submit"
-                                className="group relative w-full flex items-center justify-center gap-3 bg-slate-900 text-white dark:bg-white dark:text-slate-950 font-bold rounded-xl py-4 overflow-hidden transition-all hover:scale-[1.02] shadow-lg hover:shadow-xl dark:shadow-[0_0_30px_-5px_rgba(255,255,255,0.2)] dark:hover:shadow-[0_0_40px_-5px_rgba(255,255,255,0.3)] active:scale-95 mt-2"
+                                disabled={status.loading}
+                                className="group relative w-full flex items-center justify-center gap-3 bg-slate-900 text-white dark:bg-white dark:text-slate-950 font-bold rounded-xl py-4 overflow-hidden transition-all hover:scale-[1.02] shadow-lg hover:shadow-xl dark:shadow-[0_0_30px_-5px_rgba(255,255,255,0.2)] dark:hover:shadow-[0_0_40px_-5px_rgba(255,255,255,0.3)] active:scale-95 mt-2 disabled:opacity-70"
                             >
-                                <span>Send Message</span>
-                                <Send size={18} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                                <span>{status.loading ? 'Sending...' : 'Send Message'}</span>
+                                {!status.loading && <Send size={18} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />}
                             </button>
+
+                            {status.success && (
+                                <p className="text-green-600 dark:text-green-400 text-center font-medium">Message sent successfully!</p>
+                            )}
+                            {status.error && (
+                                <p className="text-red-600 dark:text-red-400 text-center font-medium">{status.error}</p>
+                            )}
                         </form>
                     </div>
 
