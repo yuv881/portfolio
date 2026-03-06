@@ -13,12 +13,12 @@ const Contact = () => {
                         <div className="space-y-4">
                             <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-normal text-transparent"
                                 style={{
-                                    WebkitTextStroke: '1px #64748b', // slate-500
+                                    WebkitTextStroke: '1px #64748b',
                                 }}>
                                 <span
                                     className="text-transparent transition-colors duration-1000 hover:text-slate-900 dark:hover:text-white cursor-default"
                                     style={{
-                                        WebkitTextStroke: '1px #94a3b8', // slate-400
+                                        WebkitTextStroke: '1px #94a3b8',
                                     }}
                                 >
                                     Let's build
@@ -26,7 +26,7 @@ const Contact = () => {
                                 <span
                                     className="text-transparent transition-colors duration-1000 hover:text-slate-900 dark:hover:text-white cursor-default"
                                     style={{
-                                        WebkitTextStroke: '1px #94a3b8', // slate-400
+                                        WebkitTextStroke: '1px #94a3b8',
                                     }}
                                 >
                                     something great
