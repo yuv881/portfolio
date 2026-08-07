@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Retail Analytics Dashboard",
+    "description": "A responsive dashboard concept for monitoring store performance, campaign results, and operational signals.",
+    "image":"",
+    "link":"",
+    "github":""
+  },
+  {
+    "id": 2,
+    "title": "Customer Onboarding Flow",
+    "description": "A guided setup experience with clean steps, helpful form states, and a layout designed for repeat use.",
+    "image":"",
+    "link":"",
+    "github":""
+  },
+  {
+    "id": 3,
+    "title": "Portfolio System",
+    "description": "A compact personal site system with reusable sections, project previews, and a refined content rhythm.",
+    "image":"",
+    "link":"",
+    "github":""
+  }
+]
