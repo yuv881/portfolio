@@ -7,7 +7,8 @@ import HeroSection from '../components/sections/HeroSection'
 import { pageClass } from '../components/ui/styles'
 
 const Homepage = () => {
-  const featuredProjects = projects.slice(0, 2)
+  const featuredProjectIds = [3, 4, 5]
+  const featuredProjects = projects.filter((project) => featuredProjectIds.includes(project.id))
 
   return (
     <div className={pageClass}>

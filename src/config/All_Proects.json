@@ -5,15 +5,25 @@
     "description": "A responsive dashboard concept for monitoring store performance, campaign results, and operational signals.",
     "image": "",
     "link": "https://tweet-app-69ll.onrender.com",
-    "github": "https://github.com/yuv881/Tweet-App"
+    "github": "https://github.com/yuv881/Tweet-App",
+    "techStack": [
+      "Python",
+      "Django",
+      "sqlite3",
+      "Bootstrap"
+    ]
   },
   {
     "id": 2,
     "title": "Personal Portfolio",
-    "description": "A guided setup experience with clean steps, helpful form states, and a layout designed for repeat use.",
+    "description": "A portfolio website for a web developer",
     "image": "",
     "link": "https://portfolio-byqj.onrender.com",
-    "github": "https://github.com/yuv881/portfolio"
+    "github": "https://github.com/yuv881/portfolio",
+    "techStack": [
+      "React",
+      "TailwindCSS"
+    ]
   },
   {
     "id": 3,
@@ -21,7 +31,11 @@
     "description": "A python project which ai base text summarizer and pdf summarizer",
     "image": "",
     "link": "https://python-ai-7qx5.onrender.com",
-    "github": "https://github.com/yuv881/Python-AI"
+    "github": "https://github.com/yuv881/Python-AI",
+    "techStack": [
+      "Python",
+      "Django"
+    ]
   },
   {
     "id": 4,
@@ -29,13 +43,25 @@
     "description": "A react project which ai base text summarizer and pdf summarizer",
     "image": "",
     "link": "https://trip-planner-1-l03b.onrender.com/dashboard",
-    "github": "https://github.com/yuv881/Trip-Planner"
+    "github": "https://github.com/yuv881/Trip-Planner",
+    "techStack": [
+      "React",
+      "TailwindCSS",
+      "Node.js",
+      "Express",
+      "MongoDb"
+    ]
   },
   {
     "id": 5,
     "title": "Discount Ninja",
     "description": "A react project which ai base text summarizer and pdf summarizer",
     "image": "",
-    "link": "https://apps.shopify.com/discount-ninja-mt"
+    "link": "https://apps.shopify.com/discount-ninja-mt",
+    "techStack": [
+      "Shopify Admin API",
+      "Graphql",
+      "MongoDb"
+    ]
   }
 ]
