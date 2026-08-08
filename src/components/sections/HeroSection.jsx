@@ -5,7 +5,7 @@ const HeroSection = () => (
   <section className="grid min-h-[calc(100vh-160px)] grid-cols-[minmax(0,1.05fr)_minmax(320px,0.75fr)] items-center gap-[clamp(32px,6vw,80px)] max-md:min-h-0 max-md:grid-cols-1">
     <div className="max-w-3xl">
       <p className={kickerClass}>Portfolio</p>
-      <h1 className={`${h1Class} max-w-[13ch]`}>Full-stack developer crafting clean web experiences.</h1>
+      <h1 className={`${h1Class} max-w-[17ch]`}>Full-stack developer crafting clean web experiences.</h1>
       <p className={`${bodyClass} mb-8 max-w-[66ch] text-[clamp(1.05rem,1.7vw,1.28rem)]`}>
         I turn product ideas into polished React interfaces, practical backend flows,
         and pages that feel composed from the first tap.

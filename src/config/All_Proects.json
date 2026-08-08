@@ -3,7 +3,7 @@
     "id": 1,
     "title": "Tweet Website",
     "description": "A responsive dashboard concept for monitoring store performance, campaign results, and operational signals.",
-    "image": "",
+    "image": "Project_images/tweet_app.png",
     "link": "https://tweet-app-69ll.onrender.com",
     "github": "https://github.com/yuv881/Tweet-App",
     "techStack": [
@@ -29,7 +29,7 @@
     "id": 3,
     "title": "Python AI",
     "description": "A python project which ai base text summarizer and pdf summarizer",
-    "image": "",
+    "image": "/Project_images/python-ai.png",
     "link": "https://python-ai-7qx5.onrender.com",
     "github": "https://github.com/yuv881/Python-AI",
     "techStack": [
@@ -41,7 +41,7 @@
     "id": 4,
     "title": "Trip Planner",
     "description": "A react project which ai base text summarizer and pdf summarizer",
-    "image": "",
+    "image": "/Project_images/trip_planner.png",
     "link": "https://trip-planner-1-l03b.onrender.com/dashboard",
     "github": "https://github.com/yuv881/Trip-Planner",
     "techStack": [
@@ -56,7 +56,7 @@
     "id": 5,
     "title": "Discount Ninja",
     "description": "A react project which ai base text summarizer and pdf summarizer",
-    "image": "",
+    "image": "/Project_images/discount_app.png",
     "link": "https://apps.shopify.com/discount-ninja-mt",
     "techStack": [
       "Shopify Admin API",
