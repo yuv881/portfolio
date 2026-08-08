@@ -1,26 +1,41 @@
 [
   {
     "id": 1,
-    "title": "Retail Analytics Dashboard",
+    "title": "Tweet Website",
     "description": "A responsive dashboard concept for monitoring store performance, campaign results, and operational signals.",
-    "image":"",
-    "link":"",
-    "github":""
+    "image": "",
+    "link": "https://tweet-app-69ll.onrender.com",
+    "github": "https://github.com/yuv881/Tweet-App"
   },
   {
     "id": 2,
-    "title": "Customer Onboarding Flow",
+    "title": "Personal Portfolio",
     "description": "A guided setup experience with clean steps, helpful form states, and a layout designed for repeat use.",
-    "image":"",
-    "link":"",
-    "github":""
+    "image": "",
+    "link": "https://portfolio-byqj.onrender.com",
+    "github": "https://github.com/yuv881/portfolio"
   },
   {
     "id": 3,
-    "title": "Portfolio System",
-    "description": "A compact personal site system with reusable sections, project previews, and a refined content rhythm.",
-    "image":"",
-    "link":"",
-    "github":""
+    "title": "Python AI",
+    "description": "A python project which ai base text summarizer and pdf summarizer",
+    "image": "",
+    "link": "https://python-ai-7qx5.onrender.com",
+    "github": "https://github.com/yuv881/Python-AI"
+  },
+  {
+    "id": 4,
+    "title": "Trip Planner",
+    "description": "A react project which ai base text summarizer and pdf summarizer",
+    "image": "",
+    "link": "https://trip-planner-1-l03b.onrender.com/dashboard",
+    "github": "https://github.com/yuv881/Trip-Planner"
+  },
+  {
+    "id": 5,
+    "title": "Discount Ninja",
+    "description": "A react project which ai base text summarizer and pdf summarizer",
+    "image": "",
+    "link": "https://apps.shopify.com/discount-ninja-mt"
   }
 ]
