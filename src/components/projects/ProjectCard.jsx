@@ -9,7 +9,7 @@ const ProjectPreview = ({ project }) => {
           src={project.image}
           alt={`${project.title} preview`}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
       </div>
     )
   }
@@ -35,7 +35,7 @@ const ProjectActions = ({ project }) => (
   <div className="mt-6 flex items-center gap-4">
     {project.link && (
       <a
-        className="group/btn inline-flex items-center gap-1.5 rounded-full bg-[var(--bg-accent)] px-4 py-2 text-xs font-bold text-[var(--text-accent)] transition-all duration-200 hover:bg-[#0C447C] hover:text-white hover:shadow-xs active:scale-95"
+        className="group/btn inline-flex items-center gap-1.5 rounded-full bg-(--bg-accent) px-4 py-2 text-xs font-bold text-(--text-accent) transition-all duration-200 hover:bg-[#0C447C] hover:text-white hover:shadow-xs active:scale-95"
         href={project.link}
         target="_blank"
         rel="noreferrer"
@@ -54,7 +54,7 @@ const ProjectActions = ({ project }) => (
     )}
     {project.github && (
       <a
-        className="group/btn inline-flex items-center gap-1.5 text-xs font-bold text-[var(--text-secondary)] transition-colors duration-200 hover:text-[var(--text-primary)] hover:underline hover:underline-offset-4"
+        className="group/btn inline-flex items-center gap-1.5 text-xs font-bold text-(--text-secondary) transition-colors duration-200 hover:text-(--text-primary) hover:underline hover:underline-offset-4"
         href={project.github}
         target="_blank"
         rel="noreferrer"
@@ -81,9 +81,8 @@ const ProjectCard = ({ project, variant = 'featured' }) => {
 
   return (
     <article
-      className={`group relative ${
-        isArchive ? 'grid grid-rows-[auto_1fr]' : ''
-      } overflow-hidden rounded-2xl border border-(--border) bg-(--surface-2) transition-all duration-300 hover:-translate-y-1.5 hover:border-(--border-strong) hover:shadow-xl hover:shadow-black/5`}
+      className={`group relative ${isArchive ? 'grid grid-rows-[auto_1fr]' : ''
+        } overflow-hidden rounded-2xl border border-(--border) bg-(--surface-2) transition-all duration-300 hover:-translate-y-1.5 hover:border-(--border-strong) hover:shadow-xl hover:shadow-black/5`}
     >
       <ProjectPreview project={project} />
       <div className="flex flex-col justify-between p-6">
