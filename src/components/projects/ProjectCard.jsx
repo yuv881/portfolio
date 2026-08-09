@@ -96,7 +96,7 @@ const ProjectCard = ({ project, variant = 'featured' }) => {
               {project.techStack.map((tech) => (
                 <span
                   key={tech}
-                  className="inline-block rounded-full border border-(--border) bg-(--surface-0) px-2.5 py-0.5 text-xs font-medium text-(--text-muted) transition-all duration-200 hover:border-(--text-primary)/30 hover:bg-white hover:text-(--text-primary) hover:shadow-xs"
+                  className="inline-block rounded-full border border-(--border) bg-(--surface-0) px-2.5 py-0.5 text-xs font-semibold text-(--text-secondary) transition-all duration-200 hover:border-(--text-primary)/30 hover:bg-white hover:text-(--text-primary) hover:shadow-xs"
                 >
                   {tech}
                 </span>
