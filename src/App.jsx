@@ -1,5 +1,7 @@
 import { useEffect } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 import Navbar from './components/Navbar.jsx'
 import Homepage from './pages/Homepage.jsx'
 import AllProjects from './pages/All_Projects.jsx'
@@ -57,6 +59,8 @@ const App = () => {
           <Route path="/projects" element={<AllProjects />} />
         </Routes>
       </main>
+      <Analytics />
+      <SpeedInsights />
     </div>
   )
 }
